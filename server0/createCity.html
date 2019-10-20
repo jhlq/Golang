@@ -1,0 +1,17 @@
+<!-- forms.html -->
+{{if .Success}}
+	{{if .NoUser}}
+		<h1>Missing user, specify by adding ?user=name to url.</h1>
+	{{else}}
+	    <h1>Created city {{.City}} for user {{.User}}.</h1>
+	{{end}}
+{{else}}
+    <h1>Create city</h1>
+    <form method="POST">
+        <label>City name:</label><br />
+        <input type="text" name="name"><br />
+        <label>Output:</label><br />
+        <input type="number" name="output"><br />
+        <input type="submit">
+    </form>
+{{end}}
